@@ -3,10 +3,7 @@ section#contact {
 }
 
 .container.contact__container {
-  width: 74%;
-  display: grid;
-  grid-template-columns: 31% 64%;
-  gap: 5%;
+  width: 50%;
 }
 
 .contact__options {

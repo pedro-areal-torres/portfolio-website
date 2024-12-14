@@ -25,7 +25,6 @@ const Projects = () => {
       >
         {portfolioProj.map(
           ({
-            id,
             name,
             img,
             descr,
@@ -35,8 +34,8 @@ const Projects = () => {
             codeUrl,
             demoUrl,
             liveDemoUrl,
-          }) => (
-            <SwiperSlide key={id}>
+          }, index) => (
+            <SwiperSlide key={index}>
               <div className='portfolio__slide'>
                 <img src={img} alt='Slider' className='portfolio__img' />
                 <div className='portfolio__details'>
@@ -49,9 +48,9 @@ const Projects = () => {
                       <span className='portfolio__tech-ddots'>:</span>
                     </h4>
                     <div className='portfolio__tech-list'>
-                      {techs.map(({ id, name, url }) => {
+                      {techs.map(({ name, url }, index) => {
                         return (
-                          <div key={id}>
+                          <div key={index}>
                             <a
                               href={url}
                               target='_blank'

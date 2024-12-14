@@ -5,7 +5,6 @@ import DEVOPS_LOGO from '../../assets/img/devops-logo.png';
 
 const certifications = [
   {
-    id: "C4",
     logo: DEVOPS_LOGO,
     title: 'DevSecOps Foundation (DSOF)℠ Certification',
     entity: 'DevOps Institute',
@@ -14,7 +13,6 @@ const certifications = [
     credentialURL: 'https://www.dropbox.com/s/hkrirkiqj1q5b1b/DevOps_DSOF_Certificate.pdf?dl=0',
   },
   {
-    id: "C3",
     logo: ORACLE_LOGO,
     title: 'Java SE 8: Programming I',
     entity: 'Oracle',
@@ -23,7 +21,6 @@ const certifications = [
     credentialURL: 'https://www.dropbox.com/s/28zllb4p5ho68gk/Oracle.pdf?dl=0',
   },
   {
-    id: "C2",
     logo: HARVARD_LOGO,
     title: "CS50's Web Programming",
     entity: 'Harvard University (edX)',
@@ -33,7 +30,6 @@ const certifications = [
       'http://cs50.harvard.edu/certificates/064d7f0c-97ac-495a-b8e1-9c0412bc8c42',
   },
   {
-    id: "C1",
     logo: INRH_LOGO,
     title: 'Pedagogical Formation of Trainer',
     entity: 'INRH, Portugal',

@@ -19,18 +19,15 @@ export const aboutMeData = [
 
 export const aboutMeList = [
   {
-    id: 1,
-    title: '4+',
+    title: '5+',
     descr: 'Years of Experience',
   },
   {
-    id: 2,
-    title: '8+',
+    title: '12+',
     descr: 'Projects from Scratch',
   },
   {
-    id: 3,
-    title: '15+',
-    descr: 'Complete Certifications',
+    title: '200+',
+    descr: 'Hours as an Instructor',
   },
 ];

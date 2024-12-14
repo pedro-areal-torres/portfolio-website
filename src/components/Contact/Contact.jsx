@@ -10,7 +10,6 @@ export const Contact = () => {
       <h2>Contact Me</h2>
 
       <div className='container contact__container'>
-        {/* END OF CONTACT OPTIONS */}
         <form
           action='https://formspree.io/f/xlezwqkd'
           method='POST'

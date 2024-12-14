@@ -1,6 +1,6 @@
 ## Personal Website
 
-This is the open source repository of my personal website, built with [React](https://reactjs.org/), [SwiperJS](https://swiperjs.com/), [FormSpree](https://formspree.io/), and hosted on [Netlify](https://www.netlify.com/).
+This was my first react project that I've built.
 
 ### See the site live at:
 

@@ -20,237 +20,131 @@ import {
 import './skills.css';
 
 export const Skills = () => {
-  const [showFrontend, setShowFrontend] = useState(false);
-  const [showBackend, setShowBackend] = useState(false);
-  const [showDatabase, setShowDatabase] = useState(false);
-  const [showProtocol, setShowProtocol] = useState(false);
-  const [showMethodPatterns, setShowMethodPatterns] = useState(false);
-  const [showTools, setShowTools] = useState(false);
-  const [showCertifications, setShowCertifications] = useState(false);
+  const [expandedSections, setExpandedSections] = useState({});
 
-  const handleFrontend = () => {
-    setShowFrontend(!showFrontend);
+  const toggleSection = (section) => {
+    setExpandedSections((prev) => ({
+      ...prev,
+      [section]: !prev[section],
+    }));
   };
 
-  const handleBackend = () => {
-    setShowBackend(!showBackend);
-  };
-
-  const handleDatabase = () => {
-    setShowDatabase(!showDatabase);
-  };
-
-  const handleProtocol = () => {
-    setShowProtocol(!showProtocol);
-  };
-
-  const handleMethodPatterns = () => {
-    setShowMethodPatterns(!showMethodPatterns);
-  };
-
-  const handleTools = () => {
-    setShowTools(!showTools);
-  };
-
-  const handleCertifications = () => {
-    setShowCertifications(!showCertifications);
-  };
+  const skillSections = [
+    {
+      id: 'frontend',
+      title: 'Frontend Development',
+      icon: <MdWeb />,
+      items: frontend,
+    },
+    {
+      id: 'backend',
+      title: 'Backend Development',
+      icon: <BsGearWideConnected />,
+      items: backend,
+    },
+    {
+      id: 'database',
+      title: 'Database',
+      icon: <HiDatabase />,
+      items: database,
+    },
+    {
+      id: 'protocol',
+      title: 'Data Protocol',
+      icon: <VscDebugDisconnect />,
+      items: dataProtocol,
+    },
+    {
+      id: 'patterns',
+      title: 'Dev. Methodologies / Patterns',
+      icon: <HiCubeTransparent />,
+      items: patterns,
+    },
+    {
+      id: 'tools',
+      title: 'Tools',
+      icon: <AiOutlineTool />,
+      items: tools,
+    },
+    {
+      id: 'certifications',
+      title: 'Certifications',
+      icon: <FaAward />,
+      items: certifications,
+      isCertification: true,
+    },
+  ];
 
   return (
-    <section id='skills'>
+    <section id="skills">
       <h2>Skills</h2>
-      <div className='container skill__container'>
-        {/* FRONTEND */}
-        <div className='skill'>
-          <div className='skill__header' onClick={handleFrontend}>
-            <div className='skill__description'>
-              <MdWeb />
-              <h4>Frontend Development</h4>
-            </div>
-            <span
-              className={`skill__arrow ${showFrontend ? 'show-items' : ''}`}
-            >
-              <MdExpandMore />
-            </span>
-          </div>
-          <div className={`skill__items ${showFrontend ? 'show-items' : ''}`}>
-            {frontend.map(({ id, technology, level }) => {
-              return (
-                <div className='skill__item' key={id}>
-                  <h3>{technology}</h3>
-                  <h5>{level}</h5>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* BACKEND */}
-        <div className='skill'>
-          <div className='skill__header' onClick={handleBackend}>
-            <div className='skill__description'>
-              <BsGearWideConnected />
-              <h4>Backend Development</h4>
-            </div>
-            <span className={`skill__arrow ${showBackend ? 'show-items' : ''}`}>
-              <MdExpandMore />
-            </span>
-          </div>
-          <div className={`skill__items ${showBackend ? 'show-items' : ''}`}>
-            {backend.map(({ id, technology, level }) => {
-              return (
-                <div className='skill__item' key={id}>
-                  <h3>{technology}</h3>
-                  <h5>{level}</h5>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* DATABASE */}
-        <div className='skill'>
-          <div className='skill__header' onClick={handleDatabase}>
-            <div className='skill__description'>
-              <HiDatabase />
-              <h4>Database</h4>
-            </div>
-            <span
-              className={`skill__arrow ${showDatabase ? 'show-items' : ''}`}
-            >
-              <MdExpandMore />
-            </span>
-          </div>
-          <div className={`skill__items ${showDatabase ? 'show-items' : ''}`}>
-            {database.map(({ id, technology, level }) => {
-              return (
-                <div className='skill__item' key={id}>
-                  <h3>{technology}</h3>
-                  <h5>{level}</h5>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* DATA PROTOCOL */}
-        <div className='skill'>
-          <div className='skill__header' onClick={handleProtocol}>
-            <div className='skill__description'>
-              <VscDebugDisconnect />
-              <h4>Data Protocol</h4>
-            </div>
-            <span
-              className={`skill__arrow ${showProtocol ? 'show-items' : ''}`}
-            >
-              <MdExpandMore />
-            </span>
-          </div>
-          <div className={`skill__items ${showProtocol ? 'show-items' : ''}`}>
-            {dataProtocol.map(({ id, technology, level }) => {
-              return (
-                <div className='skill__item' key={id}>
-                  <h3>{technology}</h3>
-                  <h5>{level}</h5>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* METHODOLOGIES / PATTERNS */}
-        <div className='skill'>
-          <div className='skill__header' onClick={handleMethodPatterns}>
-            <div className='skill__description'>
-              <HiCubeTransparent />
-              <h4>Dev. Methodologies / Patterns</h4>
-            </div>
-            <span
-              className={`skill__arrow ${showMethodPatterns ? 'show-items' : ''}`}
-            >
-              <MdExpandMore />
-            </span>
-          </div>
-          <div className={`skill__items ${showMethodPatterns ? 'show-items' : ''}`}>
-            {patterns.map(({ id, technology, level }) => {
-              return (
-                <div className='skill__item' key={id}>
-                  <h3>{technology}</h3>
-                  <h5>{level}</h5>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* TOOLS */}
-        <div className='skill'>
-          <div className='skill__header' onClick={handleTools}>
-            <div className='skill__description'>
-              <AiOutlineTool />
-              <h4>Tools</h4>
-            </div>
-            <span className={`skill__arrow ${showTools ? 'show-items' : ''}`}>
-              <MdExpandMore />
-            </span>
-          </div>
-          <div className={`skill__items ${showTools ? 'show-items' : ''}`}>
-            {tools.map(({ id, technology, level }) => {
-              return (
-                <div className='skill__item' key={id}>
-                  <h3>{technology}</h3>
-                  <h5>{level}</h5>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* CERTIFICATION */}
-        <div className='skill'>
-          <div className='skill__header' onClick={handleCertifications}>
-            <div className='skill__description'>
-              <FaAward />
-              <h4>Certifications</h4>
-            </div>
-            <span
-              className={`skill__arrow ${
-                showCertifications ? 'show-items' : ''
-              }`}
-            >
-              <MdExpandMore />
-            </span>
-          </div>
-          <div
-            className={`skill__items cert__items ${
-              showCertifications ? 'show-items' : ''
-            }`}
-          >
-            {certifications.map(
-              ({ id, logo, title, entity, descr, date, credentialURL }) => {
-                return (
-                  <div className='skill__cert' key={id}>
-                    <img src={logo}></img>
-                    <div className='skill__cert-details'>
-                      <h3 className='skill__cert-title'>{title}</h3>
-                      <h4 className='skill__cert-entity'>{entity}</h4>
-                      {descr}
-                      <h5 className='skill__cert-date'>{date}</h5>
-                      <a
-                        href={credentialURL}
-                        target='_blank'
-                        className='skill__cert-view'
-                      >
-                        Show Credencial
-                      </a>
-                    </div>
-                  </div>
-                );
-              }
-            )}
-          </div>
-        </div>
+      <div className="container skill__container">
+        {skillSections.map(({ id, title, icon, items, isCertification }) => (
+          <SkillSection
+            key={id}
+            id={id}
+            title={title}
+            icon={icon}
+            items={items}
+            isExpanded={expandedSections[id]}
+            toggleSection={() => toggleSection(id)}
+            isCertification={isCertification}
+          />
+        ))}
       </div>
     </section>
   );
 };
+
+const SkillSection = ({
+  title,
+  icon,
+  items,
+  isExpanded,
+  toggleSection,
+  isCertification,
+}) => (
+  <div className="skill">
+    <div className="skill__header" onClick={toggleSection}>
+      <div className="skill__description">
+        {icon}
+        <h4>{title}</h4>
+      </div>
+      <span className={`skill__arrow ${isExpanded ? 'show-items' : ''}`}>
+        <MdExpandMore />
+      </span>
+    </div>
+    <div className={`${isCertification ? 'skill__items-certs' : 'skill__items'} ${
+  isExpanded ? 'show-items' : ''
+}`}
+>
+      {isCertification
+        ? items.map(({ id, logo, title, entity, descr, date, credentialURL }) => (
+            <div className="skill__cert" key={id}>
+              <img src={logo} alt={`${title} Logo`} />
+              <div className="skill__cert-details">
+                <h3 className="skill__cert-title">{title}</h3>
+                <h4 className="skill__cert-entity">{entity}</h4>
+                <p>{descr}</p>
+                <h5 className="skill__cert-date">{date}</h5>
+                <a
+                  href={credentialURL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="skill__cert-view"
+                >
+                  Show Credential
+                </a>
+              </div>
+            </div>
+          ))
+        : items.map(({ id, technology, level }) => (
+            <div className="skill__item" key={id}>
+              <h3>{technology}</h3>
+              {/* <h5>{level}</h5> */}
+            </div>
+          ))}
+    </div>
+  </div>
+  );
+

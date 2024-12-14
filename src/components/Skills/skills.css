@@ -65,9 +65,28 @@
 
 .skill__container .skill .skill__items.show-items {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   animation: skillFadeIn 1s ease-in;
   row-gap: 2.5rem;
+}
+
+.skill__container .skill .skill__items-certs {
+  display: none;
+}
+
+.skill__container .skill .skill__items-certs.show-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  animation: skillFadeIn 1s ease-in;
+  row-gap: 2.5rem;
+  padding: 1rem;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .skill__container .skill .skill__items-certs.show-items {
+    grid-template-columns: 1fr; /* Only one column on mobile */
+  }
 }
 
 .skill__container .skill .skill__items.cert__items {

@@ -3,7 +3,6 @@ import WORDLE_GAME from '../../assets/img/wordle.gif';
 
 const portfolioProj = [
   {
-    id: 1,
     name: 'Wordle Game',
     img: WORDLE_GAME,
     descr: (
@@ -22,17 +21,14 @@ const portfolioProj = [
     ),
     techs: [
       {
-        id: 1,
         name: 'ReactJS',
         url: 'https://reactjs.org/',
       },
       {
-        id: 2,
         name: 'React Hooks',
         url: 'https://reactjs.org/docs/hooks-intro.html',
       },
       {
-        id: 3,
         name: 'API Context',
         url: 'https://reactjs.org/docs/context.html',
       },
@@ -42,7 +38,6 @@ const portfolioProj = [
     liveDemoUrl: 'https://gorgeous-speculoos-305690.netlify.app/',
   },
   {
-    id: 2,
     name: 'Laboratory Management',
     img: COMMING_SOON,
     descr: (
@@ -59,32 +54,27 @@ const portfolioProj = [
     ),
     techs: [
       {
-        id: 1,
         name: 'ReactJS',
         url: 'https://reactjs.org/',
       },
       {
-        id: 2,
         name: 'React Query',
         url: 'https://react-query-v3.tanstack.com/',
       },
       {
-        id: 3,
         name: 'NestJS Redux',
         url: 'https://nestjs.com/',
       },
       {
-        id: 4,
         name: 'TypeOrm',
         url: 'https://typeorm.io/',
       },
       {
-        id: 5,
         name: 'SQL',
         url: 'https://www.mysql.com/',
       },
     ],
-    creationUpdateDt: 'Release date: 2Q 2023',
+    creationUpdateDt: 'Release date: 2Q 2025',
   },
 ];
 
