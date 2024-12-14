@@ -1,12 +1,7 @@
 import { DiJava, DiJavascript1, DiReact } from 'react-icons/di';
 import { SiMysql } from 'react-icons/si';
 
-export const outerCircleIcons = [
-  <DiJavascript1 />,
-  <DiJava />,
-  <DiReact />,
-  <SiMysql />,
-];
+export const outerCircleIcons = [<DiJavascript1 />, <DiJava />, <DiReact />, <SiMysql />];
 
 export const aboutMeData = [
   {

@@ -1,21 +1,21 @@
 const backend = [
   {
-    technology: "Java",
+    technology: 'Java',
   },
   {
-    technology: "NodeJS",
+    technology: 'NodeJS',
   },
   {
-    technology: "Spring",
+    technology: 'Spring',
   },
   {
-    technology: "Hibernate",
+    technology: 'Hibernate',
   },
   {
-    technology: "Python",
+    technology: 'Python',
   },
   {
-    technology: "NestJS",
+    technology: 'NestJS',
   },
 ];
 

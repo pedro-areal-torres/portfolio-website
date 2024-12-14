@@ -9,19 +9,12 @@ export const sectionActive = () => {
       sectionTop = current.offsetTop,
       sectionId = current.getAttribute('id');
 
-    if (
-      scrollY >= sectionTop - paddingPxl &&
-      scrollY < sectionTop + sectionHeight
-    ) {
+    if (scrollY >= sectionTop - paddingPxl && scrollY < sectionTop + sectionHeight) {
       document.getElementById('nav__' + sectionId).classList.add('active');
-      document
-        .querySelector('.nav__menu-desktop a[href*=' + sectionId + ']')
-        .classList.add('active');
+      document.querySelector('.nav__menu-desktop a[href*=' + sectionId + ']').classList.add('active');
     } else {
       document.getElementById('nav__' + sectionId).classList.remove('active');
-      document
-        .querySelector('.nav__menu-desktop a[href*=' + sectionId + ']')
-        .classList.remove('active');
+      document.querySelector('.nav__menu-desktop a[href*=' + sectionId + ']').classList.remove('active');
     }
   });
 };

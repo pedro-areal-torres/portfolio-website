@@ -1,15 +1,15 @@
 const database = [
   {
-    technology: "MySQL",
+    technology: 'MySQL',
   },
   {
-    technology: "PostgreSQL",
+    technology: 'PostgreSQL',
   },
   {
-    technology: "PL/SQL",
+    technology: 'PL/SQL',
   },
   {
-    technology: "Neo4j",
+    technology: 'Neo4j',
   },
 ];
 

@@ -7,15 +7,7 @@ import { HiDatabase, HiCubeTransparent } from 'react-icons/hi';
 import { MdWeb } from 'react-icons/md';
 import { MdExpandMore } from 'react-icons/md';
 
-import {
-  backend,
-  certifications,
-  database,
-  dataProtocol,
-  frontend,
-  patterns,
-  tools,
-} from '../../data/skills/index';
+import { backend, certifications, database, dataProtocol, frontend, patterns, tools } from '../../data/skills/index';
 
 import './skills.css';
 
@@ -76,9 +68,9 @@ export const Skills = () => {
   ];
 
   return (
-    <section id="skills">
+    <section id='skills'>
       <h2>Skills</h2>
-      <div className="container skill__container">
+      <div className='container skill__container'>
         {skillSections.map(({ id, title, icon, items, isCertification }) => (
           <SkillSection
             key={id}
@@ -96,17 +88,10 @@ export const Skills = () => {
   );
 };
 
-const SkillSection = ({
-  title,
-  icon,
-  items,
-  isExpanded,
-  toggleSection,
-  isCertification,
-}) => (
-  <div className="skill">
-    <div className="skill__header" onClick={toggleSection}>
-      <div className="skill__description">
+const SkillSection = ({ title, icon, items, isExpanded, toggleSection, isCertification }) => (
+  <div className='skill'>
+    <div className='skill__header' onClick={toggleSection}>
+      <div className='skill__description'>
         {icon}
         <h4>{title}</h4>
       </div>
@@ -114,37 +99,28 @@ const SkillSection = ({
         <MdExpandMore />
       </span>
     </div>
-    <div className={`${isCertification ? 'skill__items-certs' : 'skill__items'} ${
-  isExpanded ? 'show-items' : ''
-}`}
->
+    <div className={`${isCertification ? 'skill__items-certs' : 'skill__items'} ${isExpanded ? 'show-items' : ''}`}>
       {isCertification
         ? items.map(({ id, logo, title, entity, descr, date, credentialURL }) => (
-            <div className="skill__cert" key={id}>
+            <div className='skill__cert' key={id}>
               <img src={logo} alt={`${title} Logo`} />
-              <div className="skill__cert-details">
-                <h3 className="skill__cert-title">{title}</h3>
-                <h4 className="skill__cert-entity">{entity}</h4>
+              <div className='skill__cert-details'>
+                <h3 className='skill__cert-title'>{title}</h3>
+                <h4 className='skill__cert-entity'>{entity}</h4>
                 <p>{descr}</p>
-                <h5 className="skill__cert-date">{date}</h5>
-                <a
-                  href={credentialURL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="skill__cert-view"
-                >
+                <h5 className='skill__cert-date'>{date}</h5>
+                <a href={credentialURL} target='_blank' rel='noopener noreferrer' className='skill__cert-view'>
                   Show Credential
                 </a>
               </div>
             </div>
           ))
-        : items.map(({ id, technology, level }) => (
-            <div className="skill__item" key={id}>
+        : items.map(({ technology, level }, index) => (
+            <div className='skill__item' key={index}>
               <h3>{technology}</h3>
               {/* <h5>{level}</h5> */}
             </div>
           ))}
     </div>
   </div>
-  );
-
+);

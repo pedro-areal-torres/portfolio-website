@@ -24,17 +24,7 @@ const Projects = () => {
         className='product-images-slider'
       >
         {portfolioProj.map(
-          ({
-            name,
-            img,
-            descr,
-            shortDescr,
-            techs,
-            creationUpdateDt,
-            codeUrl,
-            demoUrl,
-            liveDemoUrl,
-          }, index) => (
+          ({ name, img, descr, shortDescr, techs, creationUpdateDt, codeUrl, demoUrl, liveDemoUrl }, index) => (
             <SwiperSlide key={index}>
               <div className='portfolio__slide'>
                 <img src={img} alt='Slider' className='portfolio__img' />
@@ -51,12 +41,7 @@ const Projects = () => {
                       {techs.map(({ name, url }, index) => {
                         return (
                           <div key={index}>
-                            <a
-                              href={url}
-                              target='_blank'
-                              className='portfolio__tech-item'
-                              
-                            >
+                            <a href={url} target='_blank' className='portfolio__tech-item'>
                               {name}
                             </a>
                           </div>
@@ -64,9 +49,7 @@ const Projects = () => {
                       })}
                     </div>
                   </div>
-                  <p className='portfolio__details-creationdt'>
-                    {creationUpdateDt}
-                  </p>
+                  <p className='portfolio__details-creationdt'>{creationUpdateDt}</p>
                   <div className='portfolio__btn'>
                     {codeUrl && (
                       <>
@@ -93,7 +76,7 @@ const Projects = () => {
                 </div>
               </div>
             </SwiperSlide>
-          )
+          ),
         )}
       </Swiper>
     </div>

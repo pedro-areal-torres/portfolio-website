@@ -1,18 +1,18 @@
 const frontend = [
   {
-    technology: "Next.js",
+    technology: 'Next.js',
   },
   {
-    technology: "ReactJS",
+    technology: 'ReactJS',
   },
   {
-    technology: "TypeScript",
+    technology: 'TypeScript',
   },
   {
-    technology: "JavaScript",
+    technology: 'JavaScript',
   },
   {
-    technology: "Tailwind CSS",
+    technology: 'TailwindCSS',
   },
 ];
 

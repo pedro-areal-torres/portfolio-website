@@ -18,7 +18,8 @@ export const Home = () => {
         */}
         <h3>Hello I'm</h3>
         <h1>Pedro Torres</h1>
-        <Typewriter component={'span'}
+        <Typewriter
+          component={'span'}
           options={{
             delay: 50,
             deleteSpeed: 25,

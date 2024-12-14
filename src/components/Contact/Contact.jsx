@@ -10,11 +10,7 @@ export const Contact = () => {
       <h2>Contact Me</h2>
 
       <div className='container contact__container'>
-        <form
-          action='https://formspree.io/f/xlezwqkd'
-          method='POST'
-          target='_blank'
-        >
+        <form action='https://formspree.io/f/xlezwqkd' method='POST' target='_blank'>
           <input type='text' name='name' placeholder='Name' required />
           <input type='email' name='email' placeholder='Email' required />
           <textarea name='message' rows='5' placeholder='Message' required />

@@ -6,12 +6,4 @@ import frontend from './frontend';
 import patterns from './patterns';
 import tools from './tools';
 
-export {
-  frontend,
-  backend,
-  database,
-  tools,
-  certifications,
-  dataProtocol,
-  patterns,
-};
+export { frontend, backend, database, tools, certifications, dataProtocol, patterns };

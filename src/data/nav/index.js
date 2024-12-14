@@ -2,7 +2,7 @@ import { AiOutlineHome, AiOutlineMessage, AiOutlineUser } from 'react-icons/ai';
 import { BiBook, BiCodeAlt } from 'react-icons/bi';
 import { HiOutlineAcademicCap } from 'react-icons/hi';
 import { MdWorkOutline } from 'react-icons/md';
-export {default as PT_LOGO} from '../../assets/img/pt-logo.png';
+export { default as PT_LOGO } from '../../assets/img/pt-logo.png';
 
 export const navListDesktop = [
   {

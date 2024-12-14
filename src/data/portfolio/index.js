@@ -7,16 +7,15 @@ const portfolioProj = [
     img: WORDLE_GAME,
     descr: (
       <p className='portfolio__details-description'>
-        Wordle is an online 5-letter word game. Usually each day a new word is
-        released, but <b>on this version you can play as many times you want</b>
-        . Players have six attempts to guess what the word of the day is. During
-        the guesses, tiles will change colour to help players get the word.
+        Wordle is an online 5-letter word game. Usually each day a new word is released, but{' '}
+        <b>on this version you can play as many times you want</b>. Players have six attempts to guess what the word of
+        the day is. During the guesses, tiles will change colour to help players get the word.
       </p>
     ),
     shortDescr: (
       <p className='portfolio__details-description'>
-        Wordle is an online 5-letter word game. Usually each day a new word is
-        released, but <b>on this version you can play as many times you want</b>.
+        Wordle is an online 5-letter word game. Usually each day a new word is released, but{' '}
+        <b>on this version you can play as many times you want</b>.
       </p>
     ),
     techs: [
@@ -42,14 +41,14 @@ const portfolioProj = [
     img: COMMING_SOON,
     descr: (
       <p className='portfolio__details-description'>
-        Web app designed for precision measuring of yarn, threads, fiber, non
-        woven fabrics & various other textile materials.
+        Web app designed for precision measuring of yarn, threads, fiber, non woven fabrics & various other textile
+        materials.
       </p>
     ),
     shortDescr: (
       <p className='portfolio__details-description'>
-        Web app designed for precision measuring of yarn, threads, fiber, non
-        woven fabrics & various other textile materials.
+        Web app designed for precision measuring of yarn, threads, fiber, non woven fabrics & various other textile
+        materials.
       </p>
     ),
     techs: [

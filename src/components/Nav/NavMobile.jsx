@@ -16,10 +16,7 @@ export const NavMobile = () => {
   return (
     <nav className='nav__container-mobile'>
       <img src={PT_LOGO} alt='Website Logo' className='nav__logo' />
-      <div
-        className={`nav__menu ${showNavBar ? 'show-menu' : ''}`}
-        id='nav-menu'
-      >
+      <div className={`nav__menu ${showNavBar ? 'show-menu' : ''}`} id='nav-menu'>
         <ul className='nav__list'>
           {navListDesktop.map(({ id, sectionId, icon, name }) => {
             return (

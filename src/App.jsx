@@ -1,18 +1,7 @@
-import React from "react";
-import {
-  About,
-  Contact,
-  Education,
-  Experience,
-  Footer,
-  Home,
-  Nav,
-  Portfolio,
-  Skills
-} from "./components/index";
+import React from 'react';
+import { About, Contact, Education, Experience, Footer, Home, Nav, Portfolio, Skills } from './components/index';
 
 const App = () => {
-
   return (
     <div>
       <Home />
