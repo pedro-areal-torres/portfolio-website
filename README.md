@@ -4,7 +4,7 @@ This was my first react project that I've built.
 
 ### See the site live at:
 
-#### https://www.pedro-areal-torres.bio/
+#### https://me-pedro-areal-torres.netlify.app/
 
 ## Build
 
