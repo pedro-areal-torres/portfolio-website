@@ -24,19 +24,8 @@ const Projects = () => {
         className='product-images-slider'
       >
         {portfolioProj.map(
-          ({
-            id,
-            name,
-            img,
-            descr,
-            shortDescr,
-            techs,
-            creationUpdateDt,
-            codeUrl,
-            demoUrl,
-            liveDemoUrl,
-          }) => (
-            <SwiperSlide key={id}>
+          ({ name, img, descr, shortDescr, techs, creationUpdateDt, codeUrl, demoUrl, liveDemoUrl }, index) => (
+            <SwiperSlide key={index}>
               <div className='portfolio__slide'>
                 <img src={img} alt='Slider' className='portfolio__img' />
                 <div className='portfolio__details'>
@@ -49,15 +38,10 @@ const Projects = () => {
                       <span className='portfolio__tech-ddots'>:</span>
                     </h4>
                     <div className='portfolio__tech-list'>
-                      {techs.map(({ id, name, url }) => {
+                      {techs.map(({ name, url }, index) => {
                         return (
-                          <div key={id}>
-                            <a
-                              href={url}
-                              target='_blank'
-                              className='portfolio__tech-item'
-                              
-                            >
+                          <div key={index}>
+                            <a href={url} target='_blank' className='portfolio__tech-item'>
                               {name}
                             </a>
                           </div>
@@ -65,9 +49,7 @@ const Projects = () => {
                       })}
                     </div>
                   </div>
-                  <p className='portfolio__details-creationdt'>
-                    {creationUpdateDt}
-                  </p>
+                  <p className='portfolio__details-creationdt'>{creationUpdateDt}</p>
                   <div className='portfolio__btn'>
                     {codeUrl && (
                       <>
@@ -94,7 +76,7 @@ const Projects = () => {
                 </div>
               </div>
             </SwiperSlide>
-          )
+          ),
         )}
       </Swiper>
     </div>

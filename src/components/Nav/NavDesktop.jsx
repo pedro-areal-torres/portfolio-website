@@ -6,12 +6,10 @@ import { sectionActive } from './utils.js';
 import './navDesktop.css';
 
 export const NavDesktop = () => {
-
   useEffect(() => {
     // Initiate the event handler
     window.addEventListener('scroll', sectionActive);
 
-    
     sectionActive();
 
     // Clean up the event every time the component is re-rendered
@@ -25,14 +23,8 @@ export const NavDesktop = () => {
       <ul>
         {navListDesktop.map(({ id, sectionId, icon, name }) => {
           return (
-            <li
-              className='nav__item'
-              key={sectionId}
-              id={`nav__${id}`}
-            >
-              <a
-                href={sectionId}
-              >
+            <li className='nav__item' key={sectionId} id={`nav__${id}`}>
+              <a href={sectionId}>
                 <span className='icon'>{icon}</span>
                 <span className='text'>{name}</span>
               </a>

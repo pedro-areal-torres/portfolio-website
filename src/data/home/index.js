@@ -1,4 +1,1 @@
-export const TypewriterStrings = [
-  'Full Stack Developer',
-  'Software Engineer'
-];
+export const TypewriterStrings = ['Full Stack Developer', 'Software Engineer'];

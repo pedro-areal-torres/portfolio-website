@@ -1,23 +1,18 @@
 const frontend = [
   {
-    id: "F4",
-    technology: "HTML/CSS",
-    level: "4+ Years",
+    technology: 'Next.js',
   },
   {
-    id: "F1",
-    technology: "ReactJS",
-    level: "2 Years",
+    technology: 'ReactJS',
   },
   {
-    id: "F2",
-    technology: "TypeScript",
-    level: "2 Years",
+    technology: 'TypeScript',
   },
   {
-    id: "F3",
-    technology: "JavaScript",
-    level: "2 Years",
+    technology: 'JavaScript',
+  },
+  {
+    technology: 'TailwindCSS',
   },
 ];
 
